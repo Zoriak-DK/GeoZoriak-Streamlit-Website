@@ -1,1 +1,10 @@
 streamlit
+pandas
+numpy
+matplotlib
+scikit-learn
+folium
+geopy
+requests
+beautifulsoup4
+lxml

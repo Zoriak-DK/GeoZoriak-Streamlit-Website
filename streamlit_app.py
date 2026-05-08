@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 st.title("Bienvenue sur le site de Zoriak ❤️")
 st.write(
