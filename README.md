@@ -1,10 +1,11 @@
-# 🎈 Blank app template
+# Bienvenue sur le repos du site web de Zoriak
+## Vous trouverez ici les ressources pour le site web streamlit
+### Ce site sera une regroupement de divers outils de géographie utiles.
 
-A simple Streamlit app template for you to modify!
-
+### Exemple de page streamlit :
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
 
-### How to run it on your own machine
+### Lancez le projet en local :
 
 1. Install the requirements
 
