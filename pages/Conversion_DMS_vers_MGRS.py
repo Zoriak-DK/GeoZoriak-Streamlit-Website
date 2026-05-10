@@ -36,13 +36,18 @@ if st.button("Convertir en MGRS"):
         mgrs_coord = m.toMGRS(lat_decimal, lon_decimal)
         
         st.success(f"Coordonnées MGRS : {mgrs_coord}")
+        st.divider()
+        st.header("Visualisation sur la carte")
+        # Créer une carte centrée sur les coordonnées
+        m = folium.Map(location=[lat_decimal, lon_decimal], zoom_start=15)
+        # Ajouter un marqueur pour les coordonnées
+        folium.Marker(
+            [lat_decimal, lon_decimal],
+            popup="Coordonnées DMS",
+            tooltip="Coordonnées DMS"
+            ).add_to(m)
+        # Afficher la carte dans Streamlit
+        st_data = st_folium(m, width=700, height=700)
     except Exception as e:
         st.error(f"Erreur lors de la conversion : {e}")
-    st.divider()
-    st.header("Visualisation sur la carte")
-    # Créer une carte centrée sur les coordonnées
-    m = folium.Map(location=[lat_decimal, lon_decimal], zoom_start=15)
-    # Ajouter un marqueur pour les coordonnées
-    folium.Marker([lat_decimal, lon_decimal], popup=f"MGRS: {mgrs_coord}").add_to(m)
-    # Afficher la carte dans Streamlit
-    st_folium(m, width=700)
+

@@ -1,4 +1,6 @@
 import streamlit as st
+import folium
+from streamlit_folium import st_folium
 st.title("Convertisseur de coordonnées DMS vers DD")
 st.write("Entrez les coordonnées en degrés, minutes et secondes (DMS) pour les convertir en degrés décimaux (DD).")
 st.divider()
@@ -29,5 +31,15 @@ if st.button("Convertir en DD"):
         lon_decimal = dms_to_decimal(longitude_dms)
         
         st.success(f"Coordonnées en degrés décimaux : Latitude {lat_decimal:.3f}, Longitude {lon_decimal:.3f}")
+        # Afficher les coordonnées sur la carte
+        st.divider()
+        st.header("Visualisation sur la carte")
+        m = folium.Map(location=[lat_decimal, lon_decimal], zoom_start=15)
+        folium.Marker(
+            [lat_decimal, lon_decimal],
+            popup="Coordonnées DMS",
+            tooltip="Coordonnées DMS"
+        ).add_to(m)
+        st_data = st_folium(m, width=700, height=700)
     except Exception as e:
         st.error(f"Erreur lors de la conversion : {e}")
