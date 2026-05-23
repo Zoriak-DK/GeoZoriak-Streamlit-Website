@@ -1,0 +1,19 @@
+{
+    "autor": "Zoriak",
+    "version": "1.0.0",
+    "description": "Data for the website",
+    "websites": [
+        {
+            "name": "Google",
+            "url": "https://www.google.com"
+        },
+        {
+            "name": "Facebook",
+            "url": "https://www.facebook.com"
+        },
+        {
+            "name": "Twitter",
+            "url": "https://www.twitter.com"
+        }
+    ]
+}
