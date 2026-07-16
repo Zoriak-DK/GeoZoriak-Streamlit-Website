@@ -10,11 +10,11 @@ st.write(
 )
 st.divider()
 st.header("Liens utiles")
-col1, col2, col3 = st.columns(3)
+col1, col2 = st.columns(2)
 
 with col1:
     st.link_button("GitHub du projet", "https://github.com/Zoriak-DK/Zoriak_WebSite")
+    st.link_button("Documentation de Streamlit", "https://docs.streamlit.io/")
 with col2:
     st.link_button("OpenStreetMap", "https://www.openstreetmap.org/")
-with col3:
-    st.link_button("Documentation de Streamlit", "https://docs.streamlit.io/")
+    st.link_button("QGIS", "https://qgis.org")

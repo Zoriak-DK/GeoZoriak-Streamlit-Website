@@ -1,9 +1,8 @@
 import streamlit as st
-import folium
-from streamlit_folium import st_folium
 from tools.Conversions import dms_to_decimal
 from tools.DisplayFolium import display_folium
 
+st.set_page_config(page_title="Zoriak - Conversion de coordonnées", page_icon="🌍", layout="wide")
 st.title("Convertisseur de coordonnées DMS vers DD")
 st.write("Entrez les coordonnées en degrés, minutes et secondes (DMS) pour les convertir en degrés décimaux (DD).")
 st.divider()

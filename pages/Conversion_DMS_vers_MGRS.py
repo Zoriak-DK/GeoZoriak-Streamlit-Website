@@ -1,10 +1,8 @@
 import streamlit as st
-import mgrs
-import folium
-from streamlit_folium import st_folium
 from tools.Conversions import *
 from tools.DisplayFolium import display_folium
 
+st.set_page_config(page_title="Zoriak - Conversion de coordonnées", page_icon="🌍", layout="wide")
 st.title("Convertisseur de coordonnées DMS vers MGRS")
 st.write("Entrez les coordonnées en degrés, minutes et secondes (DMS) pour les convertir en coordonnées MGRS.")
 st.divider()
