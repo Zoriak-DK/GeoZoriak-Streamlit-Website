@@ -19,4 +19,6 @@ with col2:
     st.link_button("OpenStreetMap", "https://www.openstreetmap.org/")
     st.link_button("QGIS", "https://qgis.org")
 
+st.divider()
+
 st.write("Vous avez une question ? Contactez moi à l'adresse **PyGisGeek@proton.me**")

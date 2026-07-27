@@ -1,6 +1,5 @@
 import streamlit as st
 from tools.Conversions import dms_to_decimal
-from tools.DisplayFolium import display_folium
 
 st.set_page_config(page_title="Zoriak - Conversion de coordonnées", page_icon="🌍", layout="wide")
 st.title("Convertisseur de coordonnées DMS vers DD")
@@ -18,8 +17,6 @@ if st.button("Convertir en DD"):
         lon_decimal = dms_to_decimal(longitude_dms)
 
         st.success(f"Coordonnées en degrés décimaux : Latitude {lat_decimal:.6f}, Longitude {lon_decimal:.6f}")
-
-        display_folium(lat_decimal, lon_decimal)
 
     except Exception as e:
         st.error(f"Erreur lors de la conversion : {e}")

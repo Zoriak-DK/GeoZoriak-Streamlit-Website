@@ -1,6 +1,5 @@
 import streamlit as st
 from tools.Conversions import *
-from tools.DisplayFolium import display_folium
 
 st.set_page_config(page_title="Zoriak - Conversion de coordonnées", page_icon="🌍", layout="wide")
 st.title("Convertisseur de coordonnées DMS vers MGRS")
@@ -20,8 +19,6 @@ if st.button("Convertir en MGRS"):
         
         st.success(f"Coordonnées MGRS : {mgrs_coord}")
         st.divider()
-
-        display_folium(lat_decimal, lon_decimal)
 
     except Exception as e:
         st.error(f"Erreur lors de la conversion : {e}")
