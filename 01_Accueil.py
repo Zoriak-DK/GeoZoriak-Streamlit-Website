@@ -4,9 +4,9 @@ import streamlit as st
 # Configuration de la page
 st.set_page_config(page_title="Zoriak - Outils et Ressources", page_icon=":star:", layout="wide")
 # Contenu de la page
-st.title("Bienvenue sur le site de Zoriak ❤️")
+st.title("Bienvenue sur le site de Géomatique de Zoriak ❤️")
 st.write(
-    "Vous trouverez ici des outils et des liens vers des ressources utiles."
+    "Vous trouverez ici des outils et des ressources en lien avec le monde de la géographie."
 )
 st.divider()
 st.header("Liens utiles")
@@ -18,3 +18,5 @@ with col1:
 with col2:
     st.link_button("OpenStreetMap", "https://www.openstreetmap.org/")
     st.link_button("QGIS", "https://qgis.org")
+
+st.write("Vous avez une question ? Contactez moi à l'adresse **PyGisGeek@proton.me**")

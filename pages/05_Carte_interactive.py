@@ -59,7 +59,6 @@ st.subheader("Carte Interactive")
 display_folium(latitude_input, longitude_input)
 
 # Zone pour afficher les points ajoutés manuellement
-st.subheader("Points ajoutés manuellement")
 if "new_point" in st.session_state:
     with st.expander("Voir tous les points"):
         for point in st.session_state.get("points", []):
